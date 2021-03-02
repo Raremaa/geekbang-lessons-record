@@ -1,0 +1,5 @@
+*.log
+*.iml
+.idea/
+/homework/week-1/user-web/target/
+/homework/week-1/simple-mvc/target/

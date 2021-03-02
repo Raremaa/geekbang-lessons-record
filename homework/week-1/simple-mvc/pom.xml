@@ -1,0 +1,36 @@
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0">
+        <modelVersion>4.0.0</modelVersion>
+
+	<parent>
+        <groupId>com.masaiqi.geekbang</groupId>
+        <artifactId>week-1</artifactId>
+        <version>${revision}</version>
+        <relativePath>../pom.xml</relativePath>
+	</parent>
+
+    <artifactId>simple-mvc</artifactId>
+    <name>simple-mvc ${revision}</name>
+    <packaging>jar</packaging>
+
+    <dependencies>
+        <!-- Servlet API -->
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <scope>provided</scope>
+        </dependency>
+
+        <!-- JAX-RS API -->
+        <dependency>
+            <groupId>javax.ws.rs</groupId>
+            <artifactId>javax.ws.rs-api</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>
