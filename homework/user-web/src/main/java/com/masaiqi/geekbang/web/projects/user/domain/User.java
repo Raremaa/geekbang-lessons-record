@@ -5,6 +5,7 @@ import org.hibernate.validator.constraints.Length;
 
 import javax.persistence.*;
 import javax.validation.constraints.Email;
+import java.io.Serializable;
 import java.util.Objects;
 
 import static javax.persistence.GenerationType.AUTO;
@@ -18,7 +19,7 @@ import static javax.persistence.GenerationType.AUTO;
 @Entity
 @UserValid
 @Table(name = "users")
-public class User {
+public class User implements Serializable {
 
     @Id
     @GeneratedValue(strategy = AUTO)

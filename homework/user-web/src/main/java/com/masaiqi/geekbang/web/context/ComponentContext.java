@@ -2,12 +2,16 @@ package com.masaiqi.geekbang.web.context;
 
 import com.masaiqi.geekbang.web.function.ThrowableAction;
 import com.masaiqi.geekbang.web.function.ThrowableFunction;
+import com.masaiqi.geekbang.web.projects.user.domain.User;
+import com.masaiqi.geekbang.web.projects.user.management.UserManager;
 import com.masaiqi.geekbang.web.projects.user.web.listener.ComponentContextInitializerListener;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
+import javax.management.*;
 import javax.naming.*;
 import javax.servlet.ServletContext;
+import java.lang.management.ManagementFactory;
 import java.lang.reflect.Modifier;
 import java.util.*;
 import java.util.logging.Logger;
@@ -77,6 +81,24 @@ public class ComponentContext {
         initEnvContext();
         instantiateComponents();
         initializeComponents();
+
+        // 初始化JMX MBean
+        initMBean();
+    }
+
+    private void initMBean() {
+        // 获取平台 MBean Server
+        MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
+        // 为 UserMXBean 定义 ObjectName
+        try {
+            ObjectName objectName = null;
+            objectName = new ObjectName("org.geektimes.projects.user.management:type=User");
+            // 创建 UserMBean 实例
+            User user = new User();
+            mBeanServer.registerMBean(new UserManager(new User()), objectName);
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 
     private void initializeComponents() {
