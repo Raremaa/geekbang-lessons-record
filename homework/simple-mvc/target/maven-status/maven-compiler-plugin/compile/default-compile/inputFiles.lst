@@ -1,9 +1,0 @@
-/Users/masaiqi/Documents/java_space/geekbang-record/homework/simple-mvc/src/main/java/com/masaiqi/geekbang/mvc/factory/ResponseHandlerFactory.java
-/Users/masaiqi/Documents/java_space/geekbang-record/homework/simple-mvc/src/main/java/com/masaiqi/geekbang/mvc/controller/Controller.java
-/Users/masaiqi/Documents/java_space/geekbang-record/homework/simple-mvc/src/main/java/com/masaiqi/geekbang/mvc/factory/ResponseHandler.java
-/Users/masaiqi/Documents/java_space/geekbang-record/homework/simple-mvc/src/main/java/com/masaiqi/geekbang/mvc/factory/RestResponseHandler.java
-/Users/masaiqi/Documents/java_space/geekbang-record/homework/simple-mvc/src/main/java/com/masaiqi/geekbang/mvc/factory/ForwardResponseHandler.java
-/Users/masaiqi/Documents/java_space/geekbang-record/homework/simple-mvc/src/main/java/com/masaiqi/geekbang/mvc/annotation/ResponseType.java
-/Users/masaiqi/Documents/java_space/geekbang-record/homework/simple-mvc/src/main/java/com/masaiqi/geekbang/mvc/FrontControllerServlet.java
-/Users/masaiqi/Documents/java_space/geekbang-record/homework/simple-mvc/src/main/java/com/masaiqi/geekbang/mvc/factory/RedirectResponseHandler.java
-/Users/masaiqi/Documents/java_space/geekbang-record/homework/simple-mvc/src/main/java/com/masaiqi/geekbang/mvc/HandlerMethodMetadata.java
