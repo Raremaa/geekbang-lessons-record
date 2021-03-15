@@ -5,6 +5,7 @@ import com.masaiqi.geekbang.web.function.ThrowableFunction;
 import com.masaiqi.geekbang.web.projects.user.domain.User;
 import com.masaiqi.geekbang.web.projects.user.management.UserManager;
 import com.masaiqi.geekbang.web.projects.user.web.listener.ComponentContextInitializerListener;
+import org.eclipse.microprofile.config.spi.ConfigProviderResolver;
 
 import javax.annotation.PostConstruct;
 import javax.annotation.Resource;
@@ -84,19 +85,40 @@ public class ComponentContext {
 
         // 初始化JMX MBean
         initMBean();
+
+        // 初始化 microprofile
+        initMicroprofile();
+    }
+
+    private void initMicroprofile() {
+        // #instance method generate instant based on SPI, This is a singleton implementation with double-check for thread-safe
+        ConfigProviderResolver configProviderResolvers = ConfigProviderResolver.instance();
+        if (configProviderResolvers == null) {
+            return;
+        }
+
+        // TODO 交给自定义IOC容器
+
+        // 寻找配置名字并输出
+        String key = "property.name";
+        String value = configProviderResolvers.getConfig().getValue(key, String.class);
+        logger.info("microprofile read: " + key + " | " + value);
     }
 
     private void initMBean() {
         // 获取平台 MBean Server
         MBeanServer mBeanServer = ManagementFactory.getPlatformMBeanServer();
         // 为 UserMXBean 定义 ObjectName
+
+        // TODO 交给自定义IOC容器
+
         try {
             ObjectName objectName = null;
             objectName = new ObjectName("org.geektimes.projects.user.management:type=User");
-            // 创建 UserMBean 实例
+            // TODO hard code作为一个DEMO，创建 UserMBean 实例
             User user = new User();
             mBeanServer.registerMBean(new UserManager(new User()), objectName);
-        }catch (Exception e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
     }

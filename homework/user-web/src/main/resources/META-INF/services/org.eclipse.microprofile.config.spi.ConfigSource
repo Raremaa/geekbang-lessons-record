@@ -1,0 +1,3 @@
+com.masaiqi.geekbang.web.microprofile.config.source.JavaSystemPropertiesConfigSource
+com.masaiqi.geekbang.web.microprofile.config.source.LocalFilePropertiesConfigSource
+com.masaiqi.geekbang.web.microprofile.config.source.OperatingSystemEnvironmentConfigSource

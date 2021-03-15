@@ -28,6 +28,5 @@
 	
 	2. 扩展 org.eclipse.microprofile.config.spi.Converter 实现，提供 String 类型到简单类型
 	
-	3. 通过 org.eclipse.microprofile.config.Config 读取当前应用名称
+	3. 通过 org.eclipse.microprofile.config.Config 读取当前应用名称，应用名称 property name = “application.name”
 	
-	4. 应用名称 property name = “application.name”
