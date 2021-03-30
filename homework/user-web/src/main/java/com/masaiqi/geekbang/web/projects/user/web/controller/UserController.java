@@ -1,5 +1,6 @@
 package com.masaiqi.geekbang.web.projects.user.web.controller;
 
+import com.masaiqi.geekbang.context.ClassicComponentContext;
 import com.masaiqi.geekbang.mvc.annotation.ResponseType;
 import com.masaiqi.geekbang.mvc.controller.Controller;
 import com.masaiqi.geekbang.web.context.ComponentContext;
@@ -59,6 +60,6 @@ public class UserController implements Controller {
 
     @Override
     public void init() {
-        this.userService = ComponentContext.getInstance().<UserService>getComponent("bean/UserService");
+        this.userService = ClassicComponentContext.getInstance().<UserService>getComponent("bean/UserService");
     }
 }

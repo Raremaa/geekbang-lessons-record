@@ -26,6 +26,7 @@ import java.util.stream.Stream;
  * @author masaiqi
  * @date 2021/3/9 2:25 PM
  */
+@Deprecated
 public class ComponentContext {
 
     public static final String CONTEXT_NAME = ComponentContext.class.getName();

@@ -1,9 +1,0 @@
-com.masaiqi.geekbang.web.microprofile.config.convert.BooleanConfigConverter
-com.masaiqi.geekbang.web.microprofile.config.convert.ByteConfigConverter
-com.masaiqi.geekbang.web.microprofile.config.convert.CharConfigConverter
-com.masaiqi.geekbang.web.microprofile.config.convert.DoubleConfigConverter
-com.masaiqi.geekbang.web.microprofile.config.convert.FloatConfigConverter
-com.masaiqi.geekbang.web.microprofile.config.convert.IntegerConfigConverter
-com.masaiqi.geekbang.web.microprofile.config.convert.ShortConfigConverter
-com.masaiqi.geekbang.web.microprofile.config.convert.LongConfigConverter
-com.masaiqi.geekbang.web.microprofile.config.convert.StringConfigConverter

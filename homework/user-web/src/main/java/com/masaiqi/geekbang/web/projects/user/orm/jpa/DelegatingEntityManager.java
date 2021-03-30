@@ -1,5 +1,6 @@
 package com.masaiqi.geekbang.web.projects.user.orm.jpa;
 
+import com.masaiqi.geekbang.context.ClassicComponentContext;
 import com.masaiqi.geekbang.web.context.ComponentContext;
 
 import javax.annotation.PostConstruct;
@@ -55,7 +56,7 @@ public class DelegatingEntityManager implements EntityManager {
             throw new RuntimeException(e);
         }
         // 增加 JNDI 引用处理
-        ComponentContext componentContext = ComponentContext.getInstance();
+        ClassicComponentContext componentContext = ClassicComponentContext.getInstance();
 
         for (String propertyName : properties.stringPropertyNames()) {
             String propertyValue = properties.getProperty(propertyName);
