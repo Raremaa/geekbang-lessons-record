@@ -1,0 +1,11 @@
+com.masaiqi.geekbang.configuration.microprofile.config.converter.BigDecimalConverter
+com.masaiqi.geekbang.configuration.microprofile.config.converter.BigIntegerConverter
+com.masaiqi.geekbang.configuration.microprofile.config.converter.BooleanConverter
+com.masaiqi.geekbang.configuration.microprofile.config.converter.ByteConverter
+com.masaiqi.geekbang.configuration.microprofile.config.converter.CharacterConverter
+com.masaiqi.geekbang.configuration.microprofile.config.converter.DoubleConverter
+com.masaiqi.geekbang.configuration.microprofile.config.converter.FloatConverter
+com.masaiqi.geekbang.configuration.microprofile.config.converter.IntegerConverter
+com.masaiqi.geekbang.configuration.microprofile.config.converter.LongConverter
+com.masaiqi.geekbang.configuration.microprofile.config.converter.ShortConverter
+com.masaiqi.geekbang.configuration.microprofile.config.converter.StringConverter
